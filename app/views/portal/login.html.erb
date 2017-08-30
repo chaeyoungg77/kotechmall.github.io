@@ -1,0 +1,27 @@
+
+
+
+<section id="intro" class="d-flex flex-column justify-content-center align-items-center" style=";">
+  <img class="my-5 mb-lg-0" src="/assets/koreatech_logo.png" style="height:250px; width:inherit">
+  
+
+  <form action="/portal/auth" method="POST"> 
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="ID" class="col-form-label">아이디</label>
+        <input name="id" type="text" class="form-control" placeholder="koreatech" required>
+      </div>
+
+      <div class="form-group col-md-12 mb-5">
+        <label for="Password" class="col-form-label">비밀번호</label>
+        <input name="password" type="password" class="form-control" placeholder="password" required>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg btn-block">로그인</button>
+    <button type="button" class="btn btn-lg btn-block" onclick="location.href='/users/sign_in'">돌아가기</button>
+  </form> 
+
+  
+  
+</section>

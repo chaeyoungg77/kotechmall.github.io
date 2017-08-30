@@ -1,0 +1,27 @@
+<div class="container my-5">
+    <form action = "/notice/update/<%= @post.id %>" method = POST>
+      <div class="form-group">
+        <label for="exampleInputEmail1">닉네임</label>
+        <input type="text" class="form-control" name = "nickname" value = "<%= @post.nickname %>">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">패스워드</label>
+        <input type="password" name = "pw" class="form-control" value = "<%=@post.password %>">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">제목</label>
+        <input type="text" name = "title" class="form-control" value = "<%=@post.title %>">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">휴대폰</label>
+        <input type="text" name = "num" class="form-control"  value = "<%=@post.phone %>">
+      </div>
+      <div class="form-group">
+      <label for="exampleInputEmail1">내용</label>
+      <textarea name="content" class="form-control" rows="10"><%= @post.content %></textarea>
+    </div>
+  
+  <button type="submit" class="btn btn-success" >저장하기</button>
+  <button type="button" class"btn btn-defalt" onclick="location.href='/notice/show/<%= @post.id %>'">돌아가기</button>
+</form>
+</div>

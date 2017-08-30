@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <form action ="/notice/create_new" method = "POST">
+      <div class="form-group">
+        <label for="exampleInputEmail1">닉네임</label>
+        <input type="text" class="form-control" name = "nickname">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">패스워드</label>
+        <input type="password" name = "pw" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">제목</label>
+        <input type="text" name = "title" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">휴대폰</label>
+        <input type="text" name = "num" class="form-control">
+      </div>
+      <div class="form-group">
+      <label for="exampleInputEmail1">내용</label>
+      <textarea name="content" class="form-control" rows="10"></textarea>
+    </div>
+  <button type="submit" class="btn btn-primary">글쓰기</button>
+  <button type="button" class"btn btn-defalt" onclick="location.href='/notice/index'">돌아가기</button>
+</form>
+</div>

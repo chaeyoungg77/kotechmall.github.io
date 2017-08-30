@@ -1,0 +1,42 @@
+
+<!-- sign_in -->
+
+<section id="intro" class="d-flex flex-column justify-content-center align-items-center" style=";">
+  <img class="my-5 mb-lg-0" style="width:17%;" src="/assets/logo.png" alt="kotechmall">
+
+  <div class="mb-5 intro-subtitle font-weight-thin font-italic hidden-md-down">
+    Buy Everything, Sale Everything <font class="font-weight-bold">In KOREATECH</font>
+  </div>
+
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <%= f.label :"email", class:'col-form-label' %>
+      <%= f.email_field :"email", autofocus: true, class: 'form-control', placeholder: "kotechmall@koreatech.ac.kr" %>
+    </div>
+    <div class="form-group col-md-12 mb-5">
+      <%= f.label :"password", class:'col-form-label' %>-
+      <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: "********" %>
+    </div>
+  </div>
+  
+  
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <% f.check_box :remember_me %>
+      <% f.label :remember_me %>
+    </div>
+  <% end -%>
+  
+  <div class="actions mb-2">
+    <%= f.submit "Sign in", class:'btn btn-primary btn-lg btn-block', value:"로그인" %>
+  </div>
+  <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="location.href='/portal/login'">아우누리 회원가입</button>
+  
+  
+  <% end %>
+  <!-- <%= render "devise/shared/links" %> -->
+</section>
